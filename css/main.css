@@ -48,7 +48,7 @@ section {
     }
 
 .lead {
-    font-size: 1.5em;
+    font-size: 1.5em !important;
     line-height: 1.5;
     max-width: 800px !important;
     top: 2%;
