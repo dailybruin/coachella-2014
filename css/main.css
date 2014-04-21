@@ -32,6 +32,15 @@ section {
         font-family: 'Merriweather Sans', sans-serif;
     }
 
+        section h1.banner {
+            position: absolute;
+            bottom: 0; left: 0;
+        }
+
+            section h1.banner .author {
+                font-size: 1rem;
+            }
+
     section.dark {
         background-color: black;
     }
@@ -44,4 +53,9 @@ section {
     left: 50%;
     margin-left: -400px;
     margin-top: 6em;
+}
+
+.nameplate {
+    display: block;
+    padding: 10px;
 }
