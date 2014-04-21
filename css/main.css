@@ -15,6 +15,7 @@ section {
 
     section .caption {
         display: none;
+        font-size: 0.95em;
         background-color: rgba(0,0,0, 0.6);
         padding: 1em;
         position: absolute;
