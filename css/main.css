@@ -2,7 +2,7 @@ body {
     margin: 0; padding: 0; border: 0;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: white;
-    text-shadow: 1px 1px black;
+    text-shadow: 0.1em 0.1em black;
 }
 
 section {
@@ -13,10 +13,23 @@ section {
     background-size: cover;
 }
 
-    section p {
+    section .caption {
         background-color: rgba(0,0,0, 0.6);
         padding: 1em;
         position: absolute;
+        max-width: 320px;
+    }
+
+        section .caption.wide {
+            max-width: 480px;
+        }
+
+    section h1 {
+        margin: 0;
+        padding: 0.25em 0.5em;
+        font-size: 5em;
+        text-transform: uppercase;
+        font-family: 'Merriweather Sans', sans-serif;
     }
 
     section.dark {
@@ -26,7 +39,7 @@ section {
 .lead {
     font-size: 1.5em;
     line-height: 1.5;
-    max-width: 800px;
+    max-width: 800px !important;
     top: 2%;
     left: 50%;
     margin-left: -400px;
