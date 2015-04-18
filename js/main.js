@@ -4,6 +4,11 @@ $(document).ready(function(){
 	$.getJSON(url, function(data){
 		var json = googleSheetToJSON(data);
 		console.log(json);
+
+		json = _.filter(json, function(obj) {
+			return obj.ready === "yes";
+		})
+
 	    var slides_template = _.template($('#slide_template').html());
 	    // Grab the container we want to load our table into
 	    // Some data for us to load
