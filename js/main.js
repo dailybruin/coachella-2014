@@ -1,15 +1,4 @@
 $(document).ready(function(){
-    $('.main').onepage_scroll({
-        beforeMove: function(){
-            $('section .caption').fadeOut('slow');
-        },
-        afterMove: function(){
-            $('section.active .caption').delay(500).fadeIn('slow');
-        }
-    });
-
-    $('section .caption.lead').delay(1500).fadeIn('slow');
-
     url = "https://spreadsheets.google.com/feeds/list/1n4Hk3vzivlKa7LZj9r__y4Fcq2v99jxnc43SlUBMTwY/od6/public/values?alt=json"
 
 	$.getJSON(url, function(data){
@@ -33,7 +22,23 @@ $(document).ready(function(){
 
 	    // Call the function with our Star Wars data
 	    updateTemplate(json);	
+
+	    $('.main').onepage_scroll({
+	        beforeMove: function(){
+	            $('section .caption').fadeOut('slow');
+	        },
+	        afterMove: function(){
+	            $('section.active .caption').delay(500).fadeIn('slow');
+	        }
+	    });
+
+	    $('section .caption.lead').delay(1500).fadeIn('slow');
+
+
 	});
+
+
+
 
 });
 
