@@ -52,9 +52,11 @@ function generateSectionsFromJSON(data_json) {
 	maindiv = $(".main");
 	section_html = "";
 	$.each(data_json, function (i, entry) {
-		section_html += "<section style=\"background-image: url('" + entry['image'] + "')>" + 
+		section_html += '<section style=\"background-image: url(\'' + entry['image'] + "')>" + 
 					   "</section>";
 		console.log(section_html);
 		maindiv.append(section_html);
+		maindiv.append('<section style=\"background-image: url(\'' + entry['image'] + "')>" + 
+					   "</section>");
 	});
 }
