@@ -14,9 +14,26 @@
 </head>
 <body>
     <script id="slide_template" type="text/template">
+        <section style="background-image: url('http://dailybruin.com/images/2015/04/BMC_1318.jpg')">
+            <a class="nameplate" href="http://dailybruin.com"><img src="img/nameplate.png"/></a>
+            <p class="lead caption">Setting out from Westwood on Friday morning without sunscreen and water, Daily Bruin Photo Editor Brandon Choe and I traveled into the heat of Indio for the second weekend of Coachella. After weekend one shocked and excited the Empire Polo Club with everything from Drake and Madonna’s romantic embrace to Florence Welch’s broken foot, weekend two is sure to stimulate and surprise festivalgoers. Stay tuned to <a href="https://www.facebook.com/dailybruin">Facebook</a>, <a href="https://instagram.com/dailybruin/">Instagram</a> and <a href="http://dailybruin.com">dailybruin.com</a> for all things Coachella – burgers, beer and bands included – as the Daily Bruin takes weekend two.</p>
+            <h1 class="banner">Coachella 2015 <span class="author">By Brendan Hornbostel / Photos by Brandon Choe</span></h1>
+        </section>
+        <% _.each(posts, function(post, index) { %>
+            <section style="background-image: url('<%= post.image %>')">
+                <h1><%= post.title %></h1>
+                <div class="caption">
+                <p><%= post.description %></p>
+                </div>
+            </section>
+        <%}); %>
+
+
     </script>
 
-
+    <div class="main">
+    </div>
+<!--
     <div class="main">
         <section style="background-image: url('http://dailybruin.com/images/2015/04/BMC_1318.jpg')">
             <a class="nameplate" href="http://dailybruin.com"><img src="img/nameplate.png"/></a>
@@ -36,5 +53,6 @@
             </div>
         </section>
  </div>
+ -->
 </body>
 </html>
