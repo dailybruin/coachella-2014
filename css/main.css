@@ -22,6 +22,10 @@ section {
         max-width: 320px;
     }
 
+    section .caption a {
+        color: gray;
+    }
+
         section .caption.wide {
             max-width: 480px;
         }
@@ -54,7 +58,7 @@ section {
     top: 2%;
     left: 50%;
     margin-left: -400px;
-    margin-top: 6em;
+    margin-top: 14em;
 }
 
 .nameplate {

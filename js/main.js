@@ -15,6 +15,7 @@ $(document).ready(function(){
 	$.getJSON(url, function(data){
 		var json = googleSheetToJSON(data);
 		console.log(json);
+		generateSectionsFromJSON(json);
 	});
 
 });
@@ -45,4 +46,15 @@ function googleSheetToJSON(data){
 		formatted_json.push(elem);
 	});
 	return formatted_json;
+}
+
+function generateSectionsFromJSON(data_json) {
+	maindiv = $(".main");
+	section_html = "";
+	$.each(data_json, function (i, entry) {
+		section_html += "<section style=\"background-image: url('" + entry['image'] + "')>" + 
+					   "</section>";
+		console.log(section_html);
+		maindiv.append(section_html);
+	});
 }
