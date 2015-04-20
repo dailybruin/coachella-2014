@@ -21,7 +21,7 @@ $(document).ready(function(){
 	            'posts': data
 	        });
 	        // Load the HTML into our container div
-	        console.log(slides_html);
+	        // console.log(slides_html);
 	        $('.main').html(slides_html);
 	    };
 
